@@ -1,20 +1,12 @@
 
 <h2><%= @event.name %></h2>
 <%= simple_format @event.description %>
-
-<p>
-<%= @event.description %>
-</p>
-
-<p>
-<%= @event.isbn %>
-</p>
-
-<p>
-  <%= link_to "Back to index", events_path %>
-</p>
+<%= simple_format @event.isbn %>
 
 <p>
   <%= link_to "Edit",edit_event_path(@event) %>
 </p>
 
+<p>
+  <%= link_to "Back to index", events_path %>
+</p>
