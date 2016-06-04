@@ -6,7 +6,8 @@
     
     <li>
       <%= e.name %>
-      
+      <%= link_to "Show", event_path(e) %>
+      <%= link_to "Delete", event_path(e),:method => :delete %>
     </li>
 
 
@@ -15,3 +16,4 @@
 
 
 
+<%= link_to "New",new_event_path %>
