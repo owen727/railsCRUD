@@ -4,9 +4,9 @@
 <%= simple_format @event.isbn %>
 
 <p>
-  <%= link_to "Edit",edit_event_path(@event) %>
+  <%= link_to "Edit",edit_event_path(@event),:class =>"btn btn-default" %>
 </p>
 
 <p>
-  <%= link_to "Back to index", events_path %>
+  <%= link_to "Back to index", events_path,:class =>"btn btn-default" %>
 </p>

@@ -1,21 +1,29 @@
 
 <h1>Book Lists</h1>
 
-<ul>
+<table>
   <% @events.each do |e| %>
-    
-    <li>
-      <%= e.name %>
-      <%= link_to "Show & Edit", event_path(e) %>
+  
+    <tr>
       
-      <%= link_to "Delete", event_path(e), :method => :delete %>
-    </li>
-
+      <td>
+        <%= e.name %>
+        
+        <%= link_to "Show & Edit", event_path(e), :class =>"btn btn-info" %>
+       
+        <%= link_to "Delete", event_path(e), :method => :delete ,:class =>"btn btn-danger" %>
+      </td>
+    
+    </tr>
 
   <% end %>
-</ul>
+
+  
+</table>
+
+
+<%= link_to "New",new_event_path, :class =>"btn btn-primary" %>
 
 
 
-<%= link_to "New",new_event_path %>
 <%= paginate @events %>
